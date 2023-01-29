@@ -316,6 +316,10 @@ img {
   background-repeat: no-repeat;
 }
 
+.www {
+  content: '111';
+}
+
 /* ==================== /Hero ==================== */
 
 .title {
@@ -683,6 +687,7 @@ img {
 }
 /* ==================== /footer ==================== */
 
+/* ==================== Modal Window ==================== */
 .backdrop {
   position: fixed;
   top: 0;
@@ -718,3 +723,34 @@ img {
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transform: translate(-50%, -50%) scale(1);
 }
+
+/* Modal close button */
+.modal-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  background-color: var(--footer-text-color);
+}
+
+.modal-link:hover,
+.modal-link:focus {
+  background-color: var(--button-hover-color);
+}
+
+.modal-link:hover .modal-icon,
+.modal-link:focus .modal-icon {
+  fill: #ffffff;
+}
+
+.modal {
+  padding: 24px 24px 528px 360px;
+}
+
+/* /Modal close button */
+
+/* ==================== /Modal Window ==================== */
