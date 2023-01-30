@@ -698,11 +698,13 @@ img {
   background-color: rgba(46, 47, 66, 0.4);
   opacity: 1;
 
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .backdrop.is-hidden {
   opacity: 0;
+  visibility: hidden;
   pointer-events: none;
 }
 
@@ -728,6 +730,10 @@ img {
 
 /* Modal close button */
 .modal-link {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+
   display: flex;
   justify-content: center;
   align-items: center;
@@ -741,6 +747,10 @@ img {
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.modal-icon {
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 .modal-link:hover,
 .modal-link:focus {
   background-color: var(--button-hover-color);
@@ -749,10 +759,6 @@ img {
 .modal-link:hover .modal-icon,
 .modal-link:focus .modal-icon {
   fill: #ffffff;
-}
-
-.modal {
-  padding: 24px 24px 528px 360px;
 }
 
 /* /Modal close button */
